@@ -1,4 +1,5 @@
 import React from "react";
+import "./Paginacao.css";
 
 const Paginacao = ({page, setPage}) => {
 
@@ -17,16 +18,16 @@ const Paginacao = ({page, setPage}) => {
   };
 
   return (
-    <>
-      <div>
+    
+      <div className="paginacao-container">
         <button onClick={Previous}>
-          Previous
+          Anterior
         </button>
         <button onClick={Next}>
-          Next
+          Próximo
         </button>
       </div>
-    </>
+    
   );
 };
 

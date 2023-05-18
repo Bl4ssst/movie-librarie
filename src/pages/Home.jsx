@@ -18,7 +18,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const topRatedUrl = `${moviesURL}top_rated?${apiKey}&page=${page}`;
+    const topRatedUrl = `${moviesURL}top_rated?${apiKey}&page=${page}&language=pt-BR`;
     console.log(topRatedUrl);
     getTopRatedMovies(topRatedUrl);
   }, [page]);
@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
     <div className="container">
-      <h2 className="title">Filmes mais bem avaliados da história</h2>
+      <h2 className="title">Filmes mais bem avaliados</h2>
       <div className="movies-container">
         {topMovies.length > 0 &&
           topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}

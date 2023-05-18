@@ -1,0 +1,42 @@
+.container-footer {
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    z-index: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.row {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 5px;
+}
+
+.cfooter {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botao {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  width: 150px;
+  gap: 5px;
+  padding: 0.3rem;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.botao h5 {
+    font-size: 0.9rem;
+}

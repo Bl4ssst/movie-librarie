@@ -1,0 +1,23 @@
+.paginacao-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.paginacao-container button {
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  color: #000;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.paginacao-container button:hover {
+  background-color: transparent;
+  color: #fff;
+}
