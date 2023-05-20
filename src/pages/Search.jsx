@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import MovieCard from "../components/MovieCard";
+import Paginacao from "../components/Paginacao";
 
 const searchURL = import.meta.env.VITE_SEARCH;
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -9,6 +10,7 @@ import "./MoviesGrid.css";
 
 const Search = () => {
   const [searchParams] = useSearchParams();
+  const [page, setPage] = useState(1);
 
   const [sMovies, setMovies] = useState([]);
   const query = searchParams.get("q");
@@ -20,9 +22,9 @@ const Search = () => {
   };
 
   useEffect(() => {
-    const searchWithQueryURL = `${searchURL}?${apiKey}&query=${query}`;
+    const searchWithQueryURL = `${searchURL}?${apiKey}&page=${page}&query=${query}`;
     getSearchedMovies(searchWithQueryURL);
-  }, [query]);
+  }, [query, page]);
 
   return (
     <div className="container">
@@ -33,6 +35,7 @@ const Search = () => {
         {sMovies.length > 0  &&
           sMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
       </div>
+      <Paginacao page={page} setPage={setPage} />
     </div>
   );
 };

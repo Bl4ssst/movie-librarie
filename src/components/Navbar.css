@@ -35,3 +35,22 @@
   align-items: center;
   cursor: pointer;
 }
+
+@media screen and (max-width: 426px) {
+  #navbar {
+    z-index: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  #navbar input {
+    width: 50%;
+  }
+
+  #navbar form{
+    justify-content: end;
+  }
+}

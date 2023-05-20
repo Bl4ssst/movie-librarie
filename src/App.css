@@ -1,4 +1,10 @@
 .app-container {
   background-color: #000;
-  padding-bottom: 130px;
+  padding: 0 0 130px 0;
+}
+
+@media screen and (max-width: 426px) {
+  .app-container {
+    padding: 50px 0 130px 0;
+  }
 }
