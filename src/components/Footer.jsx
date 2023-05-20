@@ -14,12 +14,7 @@ const Footer = () => {
                       <h5 className="pt-1 fs-6">Bombando Hoje</h5>
                     </button>
                   </NavLink>
-                  <NavLink to="search">
-                    <button className="botao">
-                      <FaSearch />
-                      <h5 className="pt-1 fs-6">Procurar</h5>
-                    </button>
-                  </NavLink>
+          
                   <NavLink to="/">
                     <button className="botao">
                       <FaFilm />
